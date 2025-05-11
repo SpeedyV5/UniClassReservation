@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UniClassReservation</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/UniClassReservation.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    @RenderSection("Styles", required: false)
+    <link rel="stylesheet" href="~/js/site.js" asp-append-version="true" />
+</head>
+<body class="theme-light" id="mainBody">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="mainNavbar">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">UniClassReservation</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Index">Admin Panel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Terms/Index">Terms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Classrooms/Index">Classrooms</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Reservations/Index">Reservations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Holidays/Index">Holidays</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Admin/Feedback/Index">Feedbacks</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("Instructor"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Instructor/Reservations/Index">My Reservations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Instructor/Feedback/Create">Give Feedback</a>
+                            </li>
+                        }
+                        @if (User.IsInRole("User"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
+                            </li>
+                        }
+                    </ul>
+                    <button id="themeToggle" class="btn btn-outline-secondary me-2" type="button">🌙 Dark Mode</button>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" id="mainContainer">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted" id="mainFooter">
+        <div class="container">
+            &copy; 2025 - UniClassReservation - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @section Styles {
+        <style>
+            /* Light Theme */
+            body.theme-light {
+                background-color: #FFFBF7 !important;
+                color: #5A3E36 !important;
+                font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            }
+            .theme-light .navbar, 
+            .theme-light .navbar-brand, 
+            .theme-light .nav-link, 
+            .theme-light .footer, 
+            .theme-light .table, 
+            .theme-light .form-control, 
+            .theme-light .btn, 
+            .theme-light .card, 
+            .theme-light .dropdown-menu, 
+            .theme-light .modal-content {
+                background-color: #FFFBF7 !important;
+                color: #5A3E36 !important;
+                border-color: #D69F7E !important;
+            }
+            .theme-light .navbar {
+                background-color: #F3D5B5 !important;
+                box-shadow: 0 2px 8px rgba(214,159,126,0.08);
+            }
+            .theme-light .navbar-brand {
+                color: #5A3E36 !important;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            .theme-light .nav-link.active, 
+            .theme-light .nav-link:focus, 
+            .theme-light .nav-link:hover {
+                color: #D69F7E !important;
+            }
+            .theme-light .btn-primary, 
+            .theme-light .btn-primary:focus, 
+            .theme-light .btn-primary:active {
+                background-color: #D69F7E !important;
+                border-color: #D69F7E !important;
+                color: #FFFBF7 !important;
+                box-shadow: 0 2px 8px rgba(214,159,126,0.15);
+            }
+            .theme-light .btn-outline-secondary {
+                color: #5A3E36 !important;
+                border-color: #5A3E36 !important;
+            }
+            .theme-light .btn-outline-secondary:hover, 
+            .theme-light .btn-outline-secondary:focus {
+                background-color: #5A3E36 !important;
+                color: #FFFBF7 !important;
+            }
+            .theme-light .table, 
+            .theme-light .table-bordered, 
+            .theme-light .table-sm {
+                background-color: #FFFBF7 !important;
+                color: #5A3E36 !important;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .theme-light .table th, 
+            .theme-light .table thead th {
+                background-color: #F3D5B5 !important;
+                color: #5A3E36 !important;
+                border-bottom: 2px solid #D69F7E !important;
+            }
+            .theme-light .table td, 
+            .theme-light .table th {
+                border-color: #D69F7E !important;
+            }
+            .theme-light .form-control {
+                background-color: #FFFBF7 !important;
+                color: #5A3E36 !important;
+                border-radius: 6px;
+                border: 1px solid #D69F7E !important;
+            }
+            .theme-light .form-control:focus {
+                border-color: #D69F7E !important;
+                box-shadow: 0 0 0 2px rgba(214,159,126,0.2);
+            }
+            .theme-light .badge.bg-info {
+                background-color: #D69F7E !important;
+                color: #FFFBF7 !important;
+                border-radius: 6px;
+            }
+            .theme-light .badge.bg-success {
+                background-color: #8C6D56 !important;
+                color: #F2E4D8 !important;
+            }
+            .theme-light .badge.bg-danger {
+                background-color: #ff4d6d !important;
+            }
+            .theme-light .badge.bg-warning {
+                background-color: #F3D5B5 !important;
+                color: #5A3E36 !important;
+            }
+            .theme-light .conflict-cell {
+                background-color: #ff4d6d !important;
+            }
+            .theme-light .holiday-cell {
+                background-color: #F3D5B5 !important;
+            }
+            .theme-light .card, 
+            .theme-light .modal-content {
+                background-color: #FFFBF7 !important;
+                color: #5A3E36 !important;
+                border-radius: 12px;
+                box-shadow: 0 2px 12px rgba(214,159,126,0.12);
+            }
+
+            /* Dark Theme */
+            body.theme-dark {
+                background-color: #2B211A !important;
+                color: #F2E4D8 !important;
+                font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            }
+            .theme-dark .navbar, 
+            .theme-dark .navbar-brand, 
+            .theme-dark .nav-link, 
+            .theme-dark .footer, 
+            .theme-dark .table, 
+            .theme-dark .form-control, 
+            .theme-dark .btn, 
+            .theme-dark .card, 
+            .theme-dark .dropdown-menu, 
+            .theme-dark .modal-content {
+                background-color: #2B211A !important;
+                color: #F2E4D8 !important;
+                border-color: #8C6D56 !important;
+            }
+            .theme-dark .navbar {
+                background-color: #2B211A !important;
+                box-shadow: 0 2px 8px rgba(140,109,86,0.08);
+            }
+            .theme-dark .navbar-brand {
+                color: #F2E4D8 !important;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            .theme-dark .nav-link.active, 
+            .theme-dark .nav-link:focus, 
+            .theme-dark .nav-link:hover {
+                color: #D69F7E !important;
+            }
+            .theme-dark .btn-primary, 
+            .theme-dark .btn-primary:focus, 
+            .theme-dark .btn-primary:active {
+                background-color: #8C6D56 !important;
+                border-color: #8C6D56 !important;
+                color: #F2E4D8 !important;
+                box-shadow: 0 2px 8px rgba(140,109,86,0.15);
+            }
+            .theme-dark .btn-outline-secondary {
+                color: #D69F7E !important;
+                border-color: #D69F7E !important;
+            }
+            .theme-dark .btn-outline-secondary:hover, 
+            .theme-dark .btn-outline-secondary:focus {
+                background-color: #D69F7E !important;
+                color: #2B211A !important;
+            }
+            .theme-dark .table, 
+            .theme-dark .table-bordered, 
+            .theme-dark .table-sm {
+                background-color: #2B211A !important;
+                color: #F2E4D8 !important;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+            .theme-dark .table th, 
+            .theme-dark .table thead th {
+                background-color: #2B211A !important;
+                color: #D69F7E !important;
+                border-bottom: 2px solid #8C6D56 !important;
+            }
+            .theme-dark .table td, 
+            .theme-dark .table th {
+                border-color: #8C6D56 !important;
+            }
+            .theme-dark .form-control {
+                background-color: #2B211A !important;
+                color: #F2E4D8 !important;
+                border-radius: 6px;
+                border: 1px solid #8C6D56 !important;
+            }
+            .theme-dark .form-control:focus {
+                border-color: #D69F7E !important;
+                box-shadow: 0 0 0 2px rgba(214,159,126,0.2);
+            }
+            .theme-dark .badge.bg-info {
+                background-color: #8C6D56 !important;
+                color: #F2E4D8 !important;
+                border-radius: 6px;
+            }
+            .theme-dark .badge.bg-success {
+                background-color: #D69F7E !important;
+                color: #2B211A !important;
+            }
+            .theme-dark .badge.bg-danger {
+                background-color: #ff4d6d !important;
+            }
+            .theme-dark .badge.bg-warning {
+                background-color: #8C6D56 !important;
+                color: #F2E4D8 !important;
+            }
+            .theme-dark .conflict-cell {
+                background-color: #ff4d6d !important;
+            }
+            .theme-dark .holiday-cell {
+                background-color: #8C6D56 !important;
+            }
+            .theme-dark .card, 
+            .theme-dark .modal-content {
+                background-color: #2B211A !important;
+                color: #F2E4D8 !important;
+                border-radius: 12px;
+                box-shadow: 0 2px 12px rgba(140,109,86,0.12);
+            }
+
+            /* Common Styles */
+            .btn, .form-control, .table, .card {
+                transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+            }
+            ::selection {
+                background: #D69F7E;
+                color: #FFFBF7;
+            }
+        </style>
+    }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function setTheme(theme) {
+                document.body.className = theme;
+                document.getElementById('mainNavbar').className = 'navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 ' + theme;
+                document.getElementById('mainFooter').className = 'border-top footer text-muted ' + theme;
+                document.getElementById('mainContainer').className = 'container ' + theme;
+                localStorage.setItem('theme', theme);
+                document.getElementById('themeToggle').textContent = theme === 'theme-light' ? '🌙 Dark Mode' : '☀️ Light Mode';
+            }
+            const btn = document.getElementById('themeToggle');
+            if (btn) {
+                btn.addEventListener('click', function () {
+                    const current = document.body.className;
+                    setTheme(current === 'theme-light' ? 'theme-dark' : 'theme-light');
+                });
+            }
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'theme-dark' || savedTheme === 'theme-light') {
+                setTheme(savedTheme);
+            } else {
+                setTheme('theme-light');
+            }
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

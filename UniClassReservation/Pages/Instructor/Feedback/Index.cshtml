@@ -1,0 +1,25 @@
+@page
+@model UniClassReservation.Pages.Instructor.Feedback.IndexModel
+@{
+    ViewData["Title"] = "My Feedbacks";
+}
+<h2>My Feedbacks</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Read?</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var feedback in Model.Feedbacks)
+    {
+        <tr>
+            <td>@feedback.Message</td>
+            <td>@feedback.CreatedAt.ToString("g")</td>
+            <td>@(feedback.IsRead ? "Yes" : "No")</td>
+        </tr>
+    }
+    </tbody>
+</table> 

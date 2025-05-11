@@ -1,0 +1,44 @@
+@page
+@model UniClassReservation.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Admin Panel";
+}
+<h2>Admin Panel</h2>
+<p>Bu sayfa sadece admin kullanıcılar içindir.</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Ad Soyad</th>
+            <th>Roller</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model.Users)
+    {
+        <tr>
+            <td>@user.Email</td>
+            <td>@user.FirstName @user.LastName</td>
+            <td>
+                @(await Model.UserManager.IsInRoleAsync(user, "Admin") ? "Admin " : "")
+                @(await Model.UserManager.IsInRoleAsync(user, "Instructor") ? "Instructor" : "")
+            </td>
+            <td>
+                <form method="post">
+                    <input type="hidden" name="SelectedUserId" value="@user.Id" />
+                    @if (!await Model.UserManager.IsInRoleAsync(user, "Instructor"))
+                    {
+                        <button type="submit" name="ActionType" value="add-instructor" class="btn btn-sm btn-success">Instructor Yap</button>
+                    }
+                    else
+                    {
+                        <button type="submit" name="ActionType" value="remove-instructor" class="btn btn-sm btn-danger">Instructor'ı Kaldır</button>
+                    }
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table> 

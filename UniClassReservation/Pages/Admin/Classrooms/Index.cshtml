@@ -1,0 +1,41 @@
+@page
+@model UniClassReservation.Pages.Admin.Classrooms.IndexModel
+@{
+    ViewData["Title"] = "Classrooms";
+}
+<h2>Classrooms</h2>
+<a asp-page="Create" class="btn btn-primary mb-2">Add New Classroom</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Capacity</th>
+            <th>Location</th>
+            <th>Active?</th>
+            <th>Average Rating</th>
+            <th>Feedback Count</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var classroom in Model.Classrooms)
+    {
+        <tr>
+            <td>@classroom.Name</td>
+            <td>@classroom.Capacity</td>
+            <td>@classroom.Location</td>
+            <td>@(classroom.IsActive ? "Yes" : "No")</td>
+            <td>
+                @(classroom.AverageRating > 0 ? classroom.AverageRating.ToString("F1") : "N/A")
+            </td>
+            <td>
+                @classroom.FeedbackCount
+            </td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@classroom.Id" class="btn btn-sm btn-warning">Edit</a>
+                <a asp-page="Delete" asp-route-id="@classroom.Id" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table> 

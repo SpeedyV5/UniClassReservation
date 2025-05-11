@@ -1,0 +1,38 @@
+@page
+@model UniClassReservation.Pages.Admin.Holidays.CreateModel
+@{
+    ViewData["Title"] = "Create Holiday";
+}
+
+<h1>Create Holiday</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Holiday.Name" class="form-label">Name</label>
+        <input asp-for="Holiday.Name" class="form-control" />
+        <span asp-validation-for="Holiday.Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Holiday.StartDate" class="form-label">Start Date</label>
+        <input asp-for="Holiday.StartDate" type="date" class="form-control" />
+        <span asp-validation-for="Holiday.StartDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Holiday.EndDate" class="form-label">End Date</label>
+        <input asp-for="Holiday.EndDate" type="date" class="form-control" />
+        <span asp-validation-for="Holiday.EndDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <input asp-for="Holiday.IsActive" class="form-check-input" />
+        <label asp-for="Holiday.IsActive" class="form-check-label">Active?</label>
+    </div>
+    <button type="submit" class="btn btn-primary" name="repeatType" value="none">Save</button>
+    <button type="submit" class="btn btn-secondary ms-2" name="repeatType" value="weekly">Save as Weekly</button>
+    <button type="submit" class="btn btn-secondary ms-2" name="repeatType" value="monthly">Save as Monthly</button>
+    <button type="submit" class="btn btn-secondary ms-2" name="repeatType" value="yearly">Save as Yearly</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 

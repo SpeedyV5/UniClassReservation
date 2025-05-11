@@ -1,0 +1,54 @@
+@page "{id:int}"
+@model UniClassReservation.Pages.Admin.Classrooms.DetailsModel
+@{
+    ViewData["Title"] = "Classroom Details";
+}
+<h2>Classroom Details</h2>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Classroom.Name</h5>
+                <p class="card-text">
+                    <strong>Capacity:</strong> @Model.Classroom.Capacity<br />
+                    <strong>Location:</strong> @Model.Classroom.Location<br />
+                    <strong>Status:</strong> @(Model.Classroom.IsActive ? "Active" : "Inactive")
+                </p>
+                <div class="d-flex justify-content-between">
+                    <a asp-page="Edit" asp-route-id="@Model.Classroom.Id" class="btn btn-warning">Edit</a>
+                    <a asp-page="Index" class="btn btn-secondary">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Feedback</h5>
+                @if (Model.Feedbacks.Any())
+                {
+                    <div class="mb-3">
+                        <h6>Average Rating: @Model.AverageRating.ToString("F1") / 5</h6>
+                    </div>
+                    <div class="list-group">
+                        @foreach (var feedback in Model.Feedbacks)
+                        {
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">@feedback.UserName</h6>
+                                    <small>@feedback.CreatedAt.ToString("g")</small>
+                                </div>
+                                <p class="mb-1">@feedback.Message</p>
+                                <small>Rating: @feedback.Rating / 5</small>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted">No feedback yet.</p>
+                }
+            </div>
+        </div>
+    </div>
+</div> 

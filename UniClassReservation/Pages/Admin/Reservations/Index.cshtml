@@ -1,0 +1,46 @@
+@page
+@model UniClassReservation.Pages.Admin.Reservations.IndexModel
+@{
+    ViewData["Title"] = "Reservations";
+}
+<h2>Reservations</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Class</th>
+            <th>Term</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var reservation in Model.Reservations)
+    {
+        <tr>
+            <td>@reservation.User?.FirstName @reservation.User?.LastName</td>
+            <td>@reservation.Classroom?.Name</td>
+            <td>@reservation.Term?.Name</td>
+            <td>@reservation.StartTime.ToString("g")</td>
+            <td>@reservation.EndTime.ToString("g")</td>
+            <td>@reservation.Status</td>
+            <td>
+                @if (reservation.Status == "Pending")
+                {
+                    <form method="post" style="display:inline">
+                        <input type="hidden" name="ReservationId" value="@reservation.Id" />
+                        <button type="submit" name="ActionType" value="approve" class="btn btn-sm btn-success">Approve</button>
+                    </form>
+                    <form method="post" style="display:inline">
+                        <input type="hidden" name="ReservationId" value="@reservation.Id" />
+                        <button type="submit" name="ActionType" value="reject" class="btn btn-sm btn-danger">Reject</button>
+                    </form>
+                }
+                <a href="/Instructor/Reservations/Index?week=@reservation.StartTime.AddDays(-(int)reservation.StartTime.DayOfWeek).ToString("yyyy-MM-dd")&adminview=true" target="_blank" class="btn btn-sm btn-info ms-1">See in Calendar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table> 

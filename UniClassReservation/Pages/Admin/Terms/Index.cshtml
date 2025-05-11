@@ -1,0 +1,33 @@
+@page
+@model UniClassReservation.Pages.Admin.Terms.IndexModel
+@{
+    ViewData["Title"] = "Terms";
+}
+<h2>Terms</h2>
+<a asp-page="Create" class="btn btn-primary mb-2">Add New Term</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Active?</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var term in Model.Terms)
+    {
+        <tr>
+            <td>@term.Name</td>
+            <td>@term.StartDate.ToString("d")</td>
+            <td>@term.EndDate.ToString("d")</td>
+            <td>@(term.IsActive ? "Yes" : "No")</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@term.Id" class="btn btn-sm btn-warning">Edit</a>
+                <a asp-page="Delete" asp-route-id="@term.Id" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table> 

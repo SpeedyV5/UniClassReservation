@@ -1,0 +1,118 @@
+@page
+@model UniClassReservation.Pages.Instructor.Reservations.IndexModel
+@{
+    ViewData["Title"] = "My Reservations";
+    var weekStart = Model.WeekStart;
+    var weekDays = Enumerable.Range(0, 7).Select(i => weekStart.AddDays(i)).ToList();
+    var hours = Enumerable.Range(8, 13).ToList(); // 08:00 - 20:00
+}
+<h2>My Reservations</h2>
+
+<div class="mb-3 d-flex justify-content-between align-items-center">
+    <div>
+        <form method="get" class="d-inline">
+            <input type="hidden" name="week" value="@weekStart.AddDays(-7).ToString("yyyy-MM-dd")" />
+            <button type="submit" class="btn btn-outline-primary">Previous</button>
+        </form>
+        <form method="get" class="d-inline">
+            <input type="hidden" name="week" value="@DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek).ToString("yyyy-MM-dd")" />
+            <button type="submit" class="btn btn-outline-primary">This Week</button>
+        </form>
+        <form method="get" class="d-inline">
+            <input type="hidden" name="week" value="@weekStart.AddDays(7).ToString("yyyy-MM-dd")" />
+            <button type="submit" class="btn btn-outline-primary">Next</button>
+        </form>
+    </div>
+    <a asp-page="Create" class="btn btn-primary">Add Reservation</a>
+</div>
+
+<table class="table table-bordered table-sm text-center align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>Hour</th>
+            @foreach (var day in weekDays)
+            {
+                <th>@day.ToString("dddd dd.MM")</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hour in hours)
+        {
+            <tr>
+                <td>@($"{hour:D2}:00 - {(hour + 1):D2}:00")</td>
+                @foreach (var day in weekDays)
+                {
+                    var slotStart = new DateTime(day.Year, day.Month, day.Day, hour, 0, 0);
+                    var slotEnd = slotStart.AddHours(1);
+                    var reservations = Model.Reservations.Where(r => r.StartTime < slotEnd && r.EndTime > slotStart).ToList();
+                    var cellClass = reservations.Count > 1 ? "conflict-cell text-white" : "";
+                    var isHoliday = Model.Holidays.Any(h => h.StartDate.Date <= day.Date && h.EndDate.Date >= day.Date);
+                    if (isHoliday) cellClass += " holiday-cell";
+                    <td class="@cellClass">
+                        @if (isHoliday)
+                        {
+                            <div class="badge bg-secondary mb-1">Holiday</div>
+                        }
+                        @if (reservations.Count > 1)
+                        {
+                            <strong>Conflict!</strong><br />
+                        }
+                        @if (reservations.Any())
+                        {
+                            foreach (var res in reservations)
+                            {
+                                string badgeClass = res.Status == "Approved" ? "bg-success" : res.Status == "Rejected" ? "bg-danger" : "bg-warning text-dark";
+                                string statusText = res.Status == "Approved" ? "Approved" : res.Status == "Rejected" ? "Rejected" : "Waiting for approve";
+                                var isMine = res.UserId == User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                                <div class="reservation-badge-wrapper d-inline-block position-relative mb-1">
+                                    <div class="badge @badgeClass reservation-badge" style="min-width:110px;white-space:normal;">
+                                        @res.Classroom?.Name<br />@res.StartTime.ToString("HH:mm")-@res.EndTime.ToString("HH:mm")<br /><strong>@statusText</strong>
+                                    </div>
+                                    @if (isMine)
+                                    {
+                                        <div class="reservation-actions">
+                                            <a asp-page="Edit" asp-route-id="@res.Id" class="btn btn-sm btn-outline-primary me-1">Düzenle</a>
+                                            <a asp-page="Delete" asp-route-id="@res.Id" class="btn btn-sm btn-outline-danger">Sil</a>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Styles {
+    <style>
+        .conflict-cell {
+            background-color: #ff6666 !important;
+        }
+        .holiday-cell {
+            background-color: #e0e0e0 !important;
+        }
+        .reservation-badge-wrapper {
+            position: relative;
+        }
+        .reservation-actions {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 10;
+        }
+        .reservation-badge-wrapper:hover .reservation-actions {
+            display: block;
+        }
+        .reservation-badge {
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+        }
+        .reservation-badge-wrapper:hover .reservation-badge {
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+    </style>
+} 

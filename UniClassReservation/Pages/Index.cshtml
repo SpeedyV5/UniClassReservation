@@ -1,0 +1,113 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="display-4 mb-4">Classroom Reservation System</h1>
+                    <p class="lead">Welcome to our university's classroom reservation system. You can easily manage your classroom reservations through this platform.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        @if (User.IsInRole("Admin"))
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Admin Panel</h5>
+                        <p class="card-text">Access the admin panel for system management:</p>
+                        <div class="d-grid gap-2">
+                            <a asp-page="/Admin/Index" class="btn btn-primary">Admin Dashboard</a>
+                            <a asp-page="/Admin/Classrooms/Index" class="btn btn-outline-primary">Manage Classrooms</a>
+                            <a asp-page="/Admin/Terms/Index" class="btn btn-outline-primary">Manage Terms</a>
+                            <a asp-page="/Admin/Reservations/Index" class="btn btn-outline-primary">View Reservations</a>
+                            <a asp-page="/Admin/Holidays/Index" class="btn btn-outline-primary">Manage Holidays</a>
+                            <a asp-page="/Admin/Feedback/Index" class="btn btn-outline-primary">View Feedbacks</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (User.IsInRole("Instructor"))
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Instructor Panel</h5>
+                        <p class="card-text">Access your instructor panel for classroom management:</p>
+                        <div class="d-grid gap-2">
+                            <a asp-page="/Instructor/Index" class="btn btn-primary">Instructor Dashboard</a>
+                            <a asp-page="/Instructor/Reservations/Create" class="btn btn-outline-primary">Create Reservation</a>
+                            <a asp-page="/Instructor/Reservations/Index" class="btn btn-outline-primary">My Reservations</a>
+                            <a asp-page="/Instructor/Feedback/Create" class="btn btn-outline-primary">Give Feedback</a>
+                            <a asp-page="/Instructor/Feedback/Index" class="btn btn-outline-primary">View Feedbacks</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a asp-page="/Contact" class="text-decoration-none">📞 Help & FAQ</a></li>
+                        <li><a asp-page="/Privacy" class="text-decoration-none">🔒 Privacy Policy</a></li>
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            <li><a asp-page="/Account/Login" class="text-decoration-none">🔑 Login</a></li>
+                            <li><a asp-page="/Account/Register" class="text-decoration-none">📝 Register</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">System Features</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-calendar-check fa-2x mb-2"></i>
+                                <h6>Easy Reservation</h6>
+                                <p class="small">Make classroom reservations quickly and easily.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-bell fa-2x mb-2"></i>
+                                <h6>Notifications</h6>
+                                <p class="small">Receive instant notifications about your reservation status.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center mb-3">
+                                <i class="fas fa-comment-alt fa-2x mb-2"></i>
+                                <h6>Feedback</h6>
+                                <p class="small">Share your feedback about classrooms and facilities.</p>
+                            </div>
+                        </div>
+                    </div> <!-- /.row -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+}

@@ -1,0 +1,40 @@
+@page "{id:int}"
+@model UniClassReservation.Pages.Instructor.Reservations.EditModel
+@{
+    ViewData["Title"] = "Edit Reservation";
+}
+<h2>Edit Reservation</h2>
+@if (ViewData["WeeklyWarning"] != null)
+{
+    <div class="alert alert-warning">@ViewData["WeeklyWarning"]</div>
+}
+<form method="post">
+    <input type="hidden" asp-for="Reservation.Id" />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="Reservation.TermId" class="form-label">Term</label>
+        <select asp-for="Reservation.TermId" class="form-select" asp-items="Model.Terms">
+            <option value="">Select term</option>
+        </select>
+        <span asp-validation-for="Reservation.TermId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Reservation.ClassroomId" class="form-label">Class</label>
+        <select asp-for="Reservation.ClassroomId" class="form-select" asp-items="Model.Classrooms">
+            <option value="">Select class</option>
+        </select>
+        <span asp-validation-for="Reservation.ClassroomId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Reservation.StartTime" class="form-label">Start Time</label>
+        <input asp-for="Reservation.StartTime" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Reservation.StartTime" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Reservation.EndTime" class="form-label">End Time</label>
+        <input asp-for="Reservation.EndTime" type="datetime-local" class="form-control" />
+        <span asp-validation-for="Reservation.EndTime" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form> 

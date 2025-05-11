@@ -1,0 +1,14 @@
+@page "{id:int}"
+@model UniClassReservation.Pages.Instructor.Reservations.DeleteModel
+@{
+    ViewData["Title"] = "Delete Reservation";
+}
+<h2>Delete Reservation</h2>
+<div class="alert alert-danger">
+    Are you sure you want to delete the reservation for <strong>@Model.Reservation.Term?.Name</strong> - <strong>@Model.Reservation.Classroom?.Name</strong>?
+</div>
+<form method="post">
+    <input type="hidden" asp-for="Reservation.Id" />
+    <button type="submit" class="btn btn-danger">Yes, Delete</button>
+    <a asp-page="Index" class="btn btn-secondary">Cancel</a>
+</form> 

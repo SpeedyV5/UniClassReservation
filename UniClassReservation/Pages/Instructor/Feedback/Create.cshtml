@@ -1,0 +1,34 @@
+@page
+@model UniClassReservation.Pages.Instructor.Feedback.CreateModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+<h2>Contact Us</h2>
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Message" class="form-label">Message</label>
+        <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Rating" class="form-label">Rating (1-5 Stars)</label>
+        <select asp-for="Rating" class="form-select">
+            <option value="">Select rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <span asp-validation-for="Rating" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ClassroomId" class="form-label">Class (Optional)</label>
+        <select asp-for="ClassroomId" asp-items="Model.ClassroomList" class="form-select">
+            <option value="">Select class (optional)</option>
+        </select>
+        <span asp-validation-for="ClassroomId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+    <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+</form> 

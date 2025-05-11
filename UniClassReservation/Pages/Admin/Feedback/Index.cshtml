@@ -1,0 +1,36 @@
+@page
+@model UniClassReservation.Pages.Admin.Feedback.IndexModel
+@{
+    ViewData["Title"] = "Feedbacks";
+}
+<h2>Feedbacks</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Read?</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var feedback in Model.Feedbacks)
+    {
+        <tr>
+            <td>@feedback.UserName</td>
+            <td>@feedback.Message</td>
+            <td>@feedback.CreatedAt.ToString("g")</td>
+            <td>@(feedback.IsRead ? "Yes" : "No")</td>
+            <td>
+                @if (!feedback.IsRead)
+                {
+                    <form method="post" asp-page-handler="MarkAsRead" asp-route-id="@feedback.Id" style="display:inline">
+                        <button type="submit" class="btn btn-sm btn-success">Mark as Read</button>
+                    </form>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table> 

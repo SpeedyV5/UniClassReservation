@@ -47,7 +47,7 @@ body.theme-light {
 .theme-light .card, 
 .theme-light .dropdown-menu, 
 .theme-light .modal-content {
-    background-color: #FFFBF7 !important;
+    background-color: #F3D5B5!important;
     color: #5A3E36 !important;
     border-color: #D69F7E !important;
 }
@@ -68,19 +68,22 @@ body.theme-light {
 .theme-light .btn-primary, 
 .theme-light .btn-primary:focus, 
 .theme-light .btn-primary:active {
-    background-color: #D69F7E !important;
-    border-color: #D69F7E !important;
-    color: #FFFBF7 !important;
-    box-shadow: 0 2px 8px rgba(214,159,126,0.15) !important;
+    background-color: #8C6D56 !important;
+    border-color: #8C6D56 !important;
+    color: #fff !important;
+    box-shadow: 0 2px 8px rgba(140,109,86,0.15) !important;
+    font-weight: 700 !important;
 }
 .theme-light .btn-outline-secondary {
-    color: #5A3E36 !important;
-    border-color: #5A3E36 !important;
+    color: #8C6D56 !important;
+    border-color: #8C6D56 !important;
+    font-weight: 700 !important;
+    background-color: #fff !important;
 }
 .theme-light .btn-outline-secondary:hover, 
 .theme-light .btn-outline-secondary:focus {
-    background-color: #5A3E36 !important;
-    color: #FFFBF7 !important;
+    background-color: #8C6D56 !important;
+    color: #fff !important;
 }
 .theme-light .table, 
 .theme-light .table-bordered, 

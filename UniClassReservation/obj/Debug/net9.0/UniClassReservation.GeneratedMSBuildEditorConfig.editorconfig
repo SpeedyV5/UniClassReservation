@@ -17,177 +17,177 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = UniClassReservation
 build_property.RootNamespace = UniClassReservation
-build_property.ProjectDir = C:\Users\hp_th\UniClassReservation\UniClassReservation\
+build_property.ProjectDir = C:\Users\ersan\OneDrive\Masaüstü\ders\ceng382\PROJE\UniClassReservation\UniClassReservation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\hp_th\UniClassReservation\UniClassReservation
+build_property.MSBuildProjectDirectory = C:\Users\ersan\OneDrive\Masaüstü\ders\ceng382\PROJE\UniClassReservation\UniClassReservation
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Create.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xhc3Nyb29tc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Delete.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xhc3Nyb29tc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Details.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xhc3Nyb29tc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Edit.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xhc3Nyb29tc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Classrooms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cQ2xhc3Nyb29tc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Feedback/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Feedback/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cRmVlZGJhY2tcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Create.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSG9saWRheXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Delete.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSG9saWRheXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Edit.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSG9saWRheXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Holidays/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSG9saWRheXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Reservations/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Reservations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cUmVzZXJ2YXRpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Create.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVGVybXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Delete.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVGVybXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Edit.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVGVybXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Admin/Terms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5cVGVybXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Contact.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Error.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Instructor/Feedback/Create.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Instructor/Feedback/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvclxGZWVkYmFja1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Instructor/Feedback/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Instructor/Feedback/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvclxGZWVkYmFja1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Create.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvclxSZXNlcnZhdGlvbnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Delete.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvclxSZXNlcnZhdGlvbnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Edit.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvclxSZXNlcnZhdGlvbnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Index.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Instructor/Reservations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvclxSZXNlcnZhdGlvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Privacy.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/_ViewImports.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/_ViewStart.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/hp_th/UniClassReservation/UniClassReservation/Pages/Shared/_Layout.cshtml]
+[C:/Users/ersan/OneDrive/Masaüstü/ders/ceng382/PROJE/UniClassReservation/UniClassReservation/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-pe3cqv3qry

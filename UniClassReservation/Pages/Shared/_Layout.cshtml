@@ -89,8 +89,8 @@
         <style>
             /* Light Theme */
             body.theme-light {
-                background-color: #FFFBF7 !important;
-                color: #5A3E36 !important;
+                background-color: #f5e6d8 !important;
+                color: #3a2a1a !important;
                 font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
             }
             .theme-light .navbar, 
@@ -103,97 +103,78 @@
             .theme-light .card, 
             .theme-light .dropdown-menu, 
             .theme-light .modal-content {
-                background-color: #FFFBF7 !important;
-                color: #5A3E36 !important;
-                border-color: #D69F7E !important;
+                background-color: #f5e6d8 !important;
+                color: #2d1c0b !important;
+                border-color: #b88c5a !important;
+                font-weight: 600;
             }
             .theme-light .navbar {
-                background-color: #F3D5B5 !important;
-                box-shadow: 0 2px 8px rgba(214,159,126,0.08);
+                background-color: #e2c6a3 !important;
+                box-shadow: 0 2px 8px rgba(184,140,90,0.08);
             }
             .theme-light .navbar-brand {
-                color: #5A3E36 !important;
-                font-weight: bold;
+                color: #1a1208 !important;
+                font-weight: 900;
                 letter-spacing: 1px;
+            }
+            .theme-light .nav-link, .theme-light .nav-link:visited {
+                color: #1a1208 !important;
+                font-weight: 700;
             }
             .theme-light .nav-link.active, 
             .theme-light .nav-link:focus, 
             .theme-light .nav-link:hover {
-                color: #D69F7E !important;
+                color: #b88c5a !important;
+            }
+            .theme-light .table th, 
+            .theme-light .table thead th {
+                background-color: #e2c6a3 !important;
+                color: #1a1208 !important;
+                border-bottom: 2px solid #b88c5a !important;
+                font-weight: 900;
+            }
+            .theme-light .table td, 
+            .theme-light .table th {
+                border-color: #b88c5a !important;
+                font-weight: 700;
+            }
+            .theme-light .form-control {
+                background-color: #fff !important;
+                color: #1a1208 !important;
+                border-radius: 6px;
+                border: 1px solid #b88c5a !important;
+                font-weight: 700;
+            }
+            .theme-light .form-control:focus {
+                border-color: #b88c5a !important;
+                box-shadow: 0 0 0 2px rgba(184,140,90,0.2);
             }
             .theme-light .btn-primary, 
             .theme-light .btn-primary:focus, 
             .theme-light .btn-primary:active {
-                background-color: #D69F7E !important;
-                border-color: #D69F7E !important;
-                color: #FFFBF7 !important;
-                box-shadow: 0 2px 8px rgba(214,159,126,0.15);
+                background-color: #b88c5a !important;
+                border-color: #b88c5a !important;
+                color: #f5e6d8 !important;
+                box-shadow: 0 2px 8px rgba(184,140,90,0.15);
+                font-weight: 700;
             }
             .theme-light .btn-outline-secondary {
-                color: #5A3E36 !important;
-                border-color: #5A3E36 !important;
+                color: #2d1c0b !important;
+                border-color: #2d1c0b !important;
+                font-weight: 600;
             }
             .theme-light .btn-outline-secondary:hover, 
             .theme-light .btn-outline-secondary:focus {
-                background-color: #5A3E36 !important;
-                color: #FFFBF7 !important;
-            }
-            .theme-light .table, 
-            .theme-light .table-bordered, 
-            .theme-light .table-sm {
-                background-color: #FFFBF7 !important;
-                color: #5A3E36 !important;
-                border-radius: 10px;
-                overflow: hidden;
-            }
-            .theme-light .table th, 
-            .theme-light .table thead th {
-                background-color: #F3D5B5 !important;
-                color: #5A3E36 !important;
-                border-bottom: 2px solid #D69F7E !important;
-            }
-            .theme-light .table td, 
-            .theme-light .table th {
-                border-color: #D69F7E !important;
-            }
-            .theme-light .form-control {
-                background-color: #FFFBF7 !important;
-                color: #5A3E36 !important;
-                border-radius: 6px;
-                border: 1px solid #D69F7E !important;
-            }
-            .theme-light .form-control:focus {
-                border-color: #D69F7E !important;
-                box-shadow: 0 0 0 2px rgba(214,159,126,0.2);
-            }
-            .theme-light .badge.bg-info {
-                background-color: #D69F7E !important;
-                color: #FFFBF7 !important;
-                border-radius: 6px;
-            }
-            .theme-light .badge.bg-success {
-                background-color: #8C6D56 !important;
-                color: #F2E4D8 !important;
-            }
-            .theme-light .badge.bg-danger {
-                background-color: #ff4d6d !important;
-            }
-            .theme-light .badge.bg-warning {
-                background-color: #F3D5B5 !important;
-                color: #5A3E36 !important;
-            }
-            .theme-light .conflict-cell {
-                background-color: #ff4d6d !important;
-            }
-            .theme-light .holiday-cell {
-                background-color: #F3D5B5 !important;
+                background-color: #2d1c0b !important;
+                color: #f5e6d8 !important;
             }
             .theme-light .card, 
             .theme-light .modal-content {
-                background-color: #FFFBF7 !important;
-                color: #5A3E36 !important;
+                background-color: #f5e6d8 !important;
+                color: #1a1208 !important;
                 border-radius: 12px;
-                box-shadow: 0 2px 12px rgba(214,159,126,0.12);
+                box-shadow: 0 2px 12px rgba(184,140,90,0.12);
+                font-weight: 700;
             }
 
             /* Dark Theme */

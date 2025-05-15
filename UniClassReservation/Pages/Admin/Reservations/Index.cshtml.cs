@@ -26,14 +26,33 @@ namespace UniClassReservation.Pages.Admin.Reservations
         public int ReservationId { get; set; }
         [BindProperty]
         public string ActionType { get; set; } = string.Empty;
-        public void OnGet()
+        public DateTime WeekStart { get; set; }
+        public List<Holiday> Holidays { get; set; } = new();
+        public void OnGet(string? week)
         {
+            // Haftanın başlangıcı (Pazartesi)
+            DateTime weekStart;
+            if (!string.IsNullOrEmpty(week) && DateTime.TryParse(week, out var parsed))
+            {
+                weekStart = parsed;
+            }
+            else
+            {
+                var today = DateTime.Today;
+                int diff = (7 + (today.DayOfWeek - DayOfWeek.Monday)) % 7;
+                weekStart = today.AddDays(-1 * diff);
+            }
+            WeekStart = weekStart;
+
             Reservations = _context.Reservations
                 .Include(r => r.User)
                 .Include(r => r.Classroom)
                 .Include(r => r.Term)
-                .OrderByDescending(r => r.StartTime)
+                .Where(r => r.StartTime >= weekStart && r.StartTime < weekStart.AddDays(7))
+                .OrderBy(r => r.StartTime)
                 .ToList();
+
+            Holidays = _context.Holidays.Where(h => h.IsActive && h.EndDate >= weekStart && h.StartDate <= weekStart.AddDays(6)).ToList();
         }
         public IActionResult OnPost()
         {

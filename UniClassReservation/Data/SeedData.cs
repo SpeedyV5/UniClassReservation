@@ -11,7 +11,7 @@ namespace UniClassReservation.Data
             var userManager = serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
 
             // Rolleri oluştur
-            string[] roles = new[] { "Admin", "Instructor", "User" };
+            string[] roles = new[] { "Admin", "Instructor"};
             foreach (var role in roles)
             {
                 if (!await roleManager.RoleExistsAsync(role))
@@ -33,7 +33,6 @@ namespace UniClassReservation.Data
                     FirstName = "Admin",
                     LastName = "User",
                     Department = "IT",
-                    DefaultRole = "Admin"
                 };
                 var result = await userManager.CreateAsync(adminUser, adminPassword);
                 if (result.Succeeded)

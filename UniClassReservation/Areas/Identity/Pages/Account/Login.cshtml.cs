@@ -113,6 +113,13 @@ namespace UniClassReservation.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
+                var user = await _signInManager.UserManager.FindByEmailAsync(Input.Email);
+                if (user == null || !user.IsActive)
+                {
+                    await _logService.LogActivityAsync("Login", "Failed-Inactive", $"User: {Input.Email}");
+                    ModelState.AddModelError(string.Empty, "Your account is inactive. Please contact the administrator.");
+                    return Page();
+                }
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {

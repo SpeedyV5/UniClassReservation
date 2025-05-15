@@ -8227,24 +8227,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp_th\\.nuget\\packages\\": {}
+    "C:\\Users\\ersan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hp_th\\UniClassReservation\\UniClassReservation\\UniClassReservation.csproj",
+      "projectUniqueName": "C:\\Users\\ersan\\OneDrive\\Masaüstü\\ders\\ceng382\\PROJE\\UniClassReservation\\UniClassReservation\\UniClassReservation.csproj",
       "projectName": "UniClassReservation",
-      "projectPath": "C:\\Users\\hp_th\\UniClassReservation\\UniClassReservation\\UniClassReservation.csproj",
-      "packagesPath": "C:\\Users\\hp_th\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hp_th\\UniClassReservation\\UniClassReservation\\obj\\",
+      "projectPath": "C:\\Users\\ersan\\OneDrive\\Masaüstü\\ders\\ceng382\\PROJE\\UniClassReservation\\UniClassReservation\\UniClassReservation.csproj",
+      "packagesPath": "C:\\Users\\ersan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ersan\\OneDrive\\Masaüstü\\ders\\ceng382\\PROJE\\UniClassReservation\\UniClassReservation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hp_th\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ersan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

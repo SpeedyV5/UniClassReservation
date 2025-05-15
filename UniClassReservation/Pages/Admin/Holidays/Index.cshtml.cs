@@ -32,6 +32,9 @@ namespace UniClassReservation.Pages.Admin.Holidays
             Holidays = _context.Holidays
                 .Where(h => h.IsActive)
                 .OrderByDescending(h => h.StartDate)
+                .ToList()
+                .GroupBy(h => h.SeriesId ?? h.Name)
+                .Select(g => g.First())
                 .ToList();
         }
 

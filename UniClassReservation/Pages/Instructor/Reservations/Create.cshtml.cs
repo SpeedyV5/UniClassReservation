@@ -106,10 +106,22 @@ namespace UniClassReservation.Pages.Instructor.Reservations
                 var term = _context.Terms.FirstOrDefault(t => t.Id == Reservation.TermId);
                 if (term != null)
                 {
+                    if (Reservation.StartTime < term.StartDate || Reservation.EndTime > term.EndDate)
+                    {
+                        ModelState.AddModelError(string.Empty, "The reservation time is outside the selected term's date range. Please select a valid date and time within the term.");
+                        Terms = _context.Terms.Where(t => t.IsActive)
+                            .OrderByDescending(t => t.StartDate)
+                            .Select(t => new SelectListItem { Value = t.Id.ToString(), Text = t.Name })
+                            .ToList();
+                        Classrooms = _context.Classrooms.Where(c => c.IsActive)
+                            .OrderBy(c => c.Name)
+                            .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                            .ToList();
+                        return Page();
+                    }
                     var start = Reservation.StartTime;
                     var end = Reservation.EndTime;
                     var reservationsToAdd = new List<Reservation>();
-                    var holidays = _context.Holidays.Where(h => h.IsActive).ToList();
                     while (start <= term.EndDate && end <= term.EndDate)
                     {
                         var tempReservation = new Reservation
@@ -121,11 +133,7 @@ namespace UniClassReservation.Pages.Instructor.Reservations
                             StartTime = start,
                             EndTime = end
                         };
-                        bool holidayConflict = _reservationService.HasHolidayConflict(tempReservation, holidays);
-                        if (!holidayConflict)
-                        {
-                            reservationsToAdd.Add(tempReservation);
-                        }
+                        reservationsToAdd.Add(tempReservation);
                         start = start.AddDays(7);
                         end = end.AddDays(7);
                     }

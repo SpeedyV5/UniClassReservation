@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UniClassReservation.Data;
 
@@ -11,9 +12,11 @@ using UniClassReservation.Data;
 namespace UniClassReservation.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250514170734_RemoveUserRoleAndFields")]
+    partial class RemoveUserRoleAndFields
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -322,35 +325,11 @@ namespace UniClassReservation.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("Day")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DayOfMonth")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("DayOfWeek")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<bool>("IsMonthly")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsRange")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsWeekly")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsYearly")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("Month")
-                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
